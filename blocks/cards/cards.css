@@ -256,3 +256,114 @@
 .cards.publications .cards-card-body > p:last-child {
   flex: 1 1 0%;
 }
+
+/* below 1440px: publications fill the section and scroll sideways */
+@media (width < 1440px) {
+  .cards.publications {
+    width: auto;
+    margin: 0 20px;
+  }
+
+  .cards.publications > ul {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+
+  .cards.publications > ul > li {
+    flex-basis: calc((100% - 60px) / 3);
+    scroll-snap-align: start;
+  }
+}
+
+/* below 1280px: cta cards stack one per row, two publications per view */
+@media (width < 1280px) {
+  .cards.cta > ul {
+    grid-template-columns: 399px;
+    justify-content: center;
+    gap: 24px 0;
+  }
+
+  .cards.publications > ul > li {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  .cards.publications .cards-card-image,
+  .cards.publications .cards-card-image img {
+    height: 260px;
+  }
+}
+
+/* below 900px: one publication card per view */
+@media (width < 900px) {
+  .cards.publications > ul > li {
+    flex-basis: 100%;
+  }
+
+  .cards.publications .cards-card-image,
+  .cards.publications .cards-card-image img {
+    height: 240px;
+  }
+
+  .cards.publications .cards-card-body {
+    height: auto;
+    padding: 16px 18px 18px;
+  }
+
+  .cards.publications h3 {
+    font-size: 17px;
+    line-height: 22.1px;
+  }
+
+  .cards.publications .cards-card-body > p:last-child {
+    font-size: 13px;
+    line-height: 19.5px;
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* below 768px: cta cards full width, heading, image, text, button */
+@media (width < 768px) {
+  .cards.cta > ul {
+    grid-template-columns: minmax(0, 320px);
+    gap: 24px 0;
+    padding: 0;
+  }
+
+  .cards.cta > ul > li {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: auto;
+    max-width: none;
+    padding: 24px 0 28px;
+  }
+
+  .cards.cta > ul > li::before {
+    display: none;
+  }
+
+  .cards.cta h3 {
+    order: -1;
+  }
+
+  .cards.cta .cards-card-image {
+    line-height: 0;
+  }
+
+  .cards.cta .cards-card-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 303 / 140;
+  }
+
+  .cards.cta p:has(a) {
+    align-self: stretch;
+    margin-top: 0;
+  }
+
+  .cards.cta a {
+    display: flex;
+    width: 100%;
+  }
+}
