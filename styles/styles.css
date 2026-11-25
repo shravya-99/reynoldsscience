@@ -369,3 +369,56 @@ main > .section > .default-content-wrapper > h4 {
   line-height: 31.25px;
   text-transform: uppercase;
 }
+
+/* default content: section heading, sub-heading, body copy */
+main > .section > .default-content-wrapper > h2 {
+  margin: 0 0 16px;
+  padding: 0 0 5px;
+  border-bottom: 1px solid var(--brand-blue);
+  color: var(--brand-blue);
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 31.25px;
+  text-transform: uppercase;
+}
+
+main > .section > .default-content-wrapper > h3 {
+  margin: 46px 0 31px;
+  color: #0078c0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.5px;
+}
+
+main > .section > .default-content-wrapper > p,
+main > .section > .default-content-wrapper > ul {
+  margin: 0 0 16px;
+}
+
+main > .section > .default-content-wrapper > ul {
+  padding-left: 24px;
+}
+
+main > .section > .default-content-wrapper > ul > li {
+  margin-bottom: 7px;
+}
+
+/* content pages: overview section with steps */
+main > .section:has(.columns.steps) {
+  margin: 92px 0 66px;
+}
+
+main > .section:has(.columns.steps) > div {
+  max-width: none;
+  padding: 0 15px;
+}
+
+main > .section:has(.columns.steps) > .columns-wrapper {
+  margin-bottom: 50px;
+}
+
+@media (width >= 900px) {
+  main > .section:has(.columns.steps) > div {
+    padding: 0 64px;
+  }
+}

@@ -31,3 +31,30 @@
     order: unset;
   }
 }
+
+/* steps: diagram image beside numbered step headings */
+.columns.steps > div {
+  align-items: flex-start;
+}
+
+.columns.steps h4 {
+  margin: 0 0 16px;
+  color: var(--brand-blue);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.5px;
+}
+
+.columns.steps h4:nth-of-type(1) { color: #53ae48; }
+.columns.steps h4:nth-of-type(2) { color: #0078c0; }
+
+.columns.steps p {
+  margin: 0 0 16px;
+}
+
+@media (width >= 900px) {
+  .columns.steps > div {
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
