@@ -14,13 +14,13 @@
 .hero .hero-dots button { width: 10px; height: 10px; padding: 0; border: 1px solid #fff; border-radius: 50%; background: transparent; }
 .hero .hero-dots button[aria-current='true'] { background: #fff; }
 
-/* banner: single-slide page hero (no carousel option) */
-.hero:not(.carousel) { height: 250px; }
-.hero:not(.carousel) .hero-text { max-width: none; margin-left: 0; padding: 80px 15px 0 46px; }
-.hero:not(.carousel) h1 { font-size: 28px; line-height: 34px; }
+/* content-page template: shorter banner hero with a larger H1 */
+body.content-page .hero { height: 250px; }
+body.content-page .hero .hero-text { max-width: none; margin-left: 0; padding: 80px 15px 0 46px; }
+body.content-page .hero h1 { font-size: 28px; line-height: 34px; }
 
 @media (width >= 900px) {
-  .hero:not(.carousel) { height: 313px; }
-  .hero:not(.carousel) .hero-text { max-width: 760px; margin-left: 115px; padding: 120px 0 0 60px; }
-  .hero:not(.carousel) h1 { font-size: 55px; line-height: 58px; }
+  body.content-page .hero { height: 313px; }
+  body.content-page .hero .hero-text { max-width: 760px; margin-left: 115px; padding: 120px 0 0 60px; }
+  body.content-page .hero h1 { font-size: 55px; line-height: 58px; }
 }

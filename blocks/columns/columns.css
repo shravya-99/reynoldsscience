@@ -33,6 +33,10 @@
 }
 
 /* steps: diagram image beside numbered step headings */
+.columns.steps {
+  margin-bottom: 50px;
+}
+
 .columns.steps > div {
   align-items: flex-start;
 }
